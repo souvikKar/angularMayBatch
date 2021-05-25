@@ -1,0 +1,4 @@
+angular supports typescript
+
+// let takes nearest block as scope
+// var takes nearest function as scope
