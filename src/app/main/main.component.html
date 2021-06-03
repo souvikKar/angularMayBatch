@@ -1,1 +1,19 @@
 <p>main works!</p>
+name:
+<!-- <input type="text" [value]="name" (keypress)="logName($event)" /> -->
+<!-- [(ngModel)]="name" -->
+
+<input type="text" [(ngModel)]="name" [value]="name" (keypress)="logName()" />
+
+{{ name }}
+<hr />
+
+<div
+  style="color: red; border: 1px solid; width: 200px; height: 200px"
+  *ngIf="showBox"
+>
+  this is my box
+</div>
+
+<button (click)="hide()">Hide</button>
+<button (click)="this.showBox = !this.showBox">Toggle</button>
