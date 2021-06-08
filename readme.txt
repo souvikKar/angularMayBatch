@@ -7,6 +7,9 @@ Data Binding:
 
 Directives: instruction to the DOM
 1. component directives : <app-header>
-2. Structural directives : (*ngIf, *ngFor)
-3. Attribute Directives : (ngStyle, ngClass)
+2. Structural directives : (*ngIf, *ngFor, *ngSwitch) -
+3. Attribute Directives : (ngStyle, ngClass) -
 4. Custom Directive : own made
+
+HomeWork: ngSwitch, ngClass, ngFor Proudut looping with offer
+tag and green color if pirce is below 100
