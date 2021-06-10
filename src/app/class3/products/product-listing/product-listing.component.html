@@ -1,0 +1,14 @@
+<h2>Products</h2>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let p of dbProducts">
+    {{ p.name }}
+    <span class="float-end">Rs{{ p.price }}/-</span>
+    <span
+      class="float-end me-4"
+      [style.color]="+p.price < 100 ? 'red' : 'black'"
+    >
+      <!-- [ngStyle]="{ color: p.price < 100 ? 'red' : 'black' }" -->
+      {{ getText(+p.price) }}
+    </span>
+  </li>
+</ul>
