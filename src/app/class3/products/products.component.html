@@ -1,15 +1,20 @@
-<div class="container">
+<div class="container border">
+  <h1>Products</h1>
   <div class="row">
     <div class="col-4"></div>
     <div class="col-6">
-      <app-product-form></app-product-form>
+      <app-product-form
+        (onProductAdded)="saveProduct($event)"
+      ></app-product-form>
     </div>
     <div class="col-2"></div>
   </div>
   <div class="row">
     <div class="col-4"></div>
     <div class="col-6">
-      <app-product-listing [dbProducts]="products"></app-product-listing>
+      <app-product-listing [dbProducts]="products">
+        {{ name }}
+      </app-product-listing>
     </div>
     <div class="col-2"></div>
   </div>

@@ -11,6 +11,7 @@ import { ClassNgforComponent } from './class2/class-ngfor.component';
 import { ProductFormComponent } from './class3/products/product-form/product-form.component';
 import { ProductListingComponent } from './class3/products/product-listing/product-listing.component';
 import { ProductsComponent } from './class3/products/products.component';
+import { NgswitchComponent } from './class4/ngswitch/ngswitch.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ProductsComponent } from './class3/products/products.component';
     ProductFormComponent,
     ProductListingComponent,
     ProductsComponent,
+    NgswitchComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],

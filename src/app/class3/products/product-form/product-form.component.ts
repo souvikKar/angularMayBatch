@@ -1,17 +1,37 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  OnDestroy,
+  OnInit,
+  Output,
+} from '@angular/core';
 
 @Component({
   selector: 'app-product-form',
   templateUrl: './product-form.component.html',
   styleUrls: ['./product-form.component.css'],
 })
-export class ProductFormComponent implements OnInit {
+export class ProductFormComponent implements OnInit, OnDestroy {
   products: { name: string; price: string }[] = [];
   name = '';
   price = '';
-  constructor() {}
 
-  ngOnInit(): void {}
+  @Output() onProductAdded = new EventEmitter<{
+    name: string;
+    price: string;
+  }>();
+
+  constructor() {
+    console.log('constructor called');
+  }
+
+  ngOnInit(): void {
+    console.log('onInit called');
+  }
+
+  ngOnDestroy() {
+    console.log('destroyed');
+  }
 
   setName(nm: string) {
     this.name = nm;
@@ -23,7 +43,8 @@ export class ProductFormComponent implements OnInit {
   onAddProduct() {
     // console.log(this.name, this.price);
     const item = { name: this.name, price: this.price };
-    this.products.push(item);
-    console.log(this.products);
+    // this.products.push(item);
+    // console.log(this.products);
+    this.onProductAdded.emit(item);
   }
 }

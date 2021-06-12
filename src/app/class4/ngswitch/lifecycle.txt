@@ -1,0 +1,21 @@
+LifeCycles
+
+1. ngOnChanges - called after a input (@input()) property changes, it can call more than
+  one, first calling at the time of page load, then multiple times whenever input value
+   changes.
+
+2. ngOnInit - called once the component is initialized, not visible though.
+
+3. ngDoCheck - it runs lots of time, whenver teh anuglar runs change detection,
+like value change, click listner, dom changes, server data response etc.
+
+4. ngAfterContentInit - called after content (ng-content) has been project in the child view
+
+5. ngAfterContentChecked - called after projected content has been checked by anuglar
+
+6. ngAfterViewInit - called once the veiw of our own component and its child has been initialized.
+
+7. ngAfterViewChecked - called every time the view has been checked.
+
+8. ngOnDestroy - called whenver component destroys from DOM
+

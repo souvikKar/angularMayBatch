@@ -1,0 +1,14 @@
+<div [ngSwitch]="option">
+  <div *ngSwitchCase="1">option 1</div>
+  <div *ngSwitchCase="2">option 2</div>
+  <div *ngSwitchCase="3">option 3</div>
+  <div *ngSwitchCase="4">option 4</div>
+  <div *ngSwitchDefault>different option</div>
+</div>
+
+<div *ngIf="option == 1; else box">opiton 1</div>
+<ng-template #box> diffrent option </ng-template>
+
+<div [ngClass]="color == 'red' ? 'box' : 'box2'">
+  this text style is being called from ngClass
+</div>
