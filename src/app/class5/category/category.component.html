@@ -1,21 +1,19 @@
 <div><button (click)="sayHello()">say hello</button></div>
 <div class="container border">
-  <h1>Products</h1>
+  <h1>Categorys</h1>
   <div class="row">
     <div class="col-4"></div>
     <div class="col-6">
-      <app-product-form
-        (onProductAdded)="saveProduct($event)"
-      ></app-product-form>
+      <app-category-form></app-category-form>
     </div>
     <div class="col-2"></div>
   </div>
   <div class="row">
     <div class="col-4"></div>
     <div class="col-6">
-      <app-product-listing [dbProducts]="products">
+      <app-category-listing>
         {{ name }}
-      </app-product-listing>
+      </app-category-listing>
     </div>
     <div class="col-2"></div>
   </div>

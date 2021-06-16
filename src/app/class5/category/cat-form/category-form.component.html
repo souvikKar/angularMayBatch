@@ -1,0 +1,21 @@
+<div class="card p-5 shadow">
+  <h2>Form</h2>
+  <form>
+    <div class="form-group">
+      <label>Name:</label>
+      <input type="text" class="form-control" (input)="setName(nm.value)" #nm />
+    </div>
+    <div class="form-group">
+      <label>Price:</label>
+      <input
+        type="number"
+        class="form-control"
+        (input)="setPrice(price.value)"
+        #price
+      />
+    </div>
+    <button class="btn btn-primary float-end mt-4" (click)="onAddCategory()">
+      Add Category
+    </button>
+  </form>
+</div>

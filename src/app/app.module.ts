@@ -12,6 +12,9 @@ import { ProductFormComponent } from './class3/products/product-form/product-for
 import { ProductListingComponent } from './class3/products/product-listing/product-listing.component';
 import { ProductsComponent } from './class3/products/products.component';
 import { NgswitchComponent } from './class4/ngswitch/ngswitch.component';
+import { CategoryComponent } from './class5/category/category.component';
+import { CategoryFormComponent } from './class5/category/cat-form/category-form.component';
+import { CategoryListingComponent } from './class5/category/cat-listing/category-listing.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,9 @@ import { NgswitchComponent } from './class4/ngswitch/ngswitch.component';
     ProductListingComponent,
     ProductsComponent,
     NgswitchComponent,
+    CategoryComponent,
+    CategoryFormComponent,
+    CategoryListingComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],

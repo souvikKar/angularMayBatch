@@ -1,4 +1,5 @@
 import { Component, OnChanges, OnInit } from '@angular/core';
+import { LogService } from 'src/app/global/log.service';
 
 @Component({
   selector: 'app-products',
@@ -8,12 +9,16 @@ import { Component, OnChanges, OnInit } from '@angular/core';
 export class ProductsComponent implements OnInit {
   products: { name: string; price: string }[] = [];
   name = 'raj';
-  constructor() {}
+  constructor(private srvLog: LogService) {}
 
   ngOnInit(): void {}
 
   saveProduct(data: any) {
     // console.log(data);
     this.products.push(data);
+  }
+
+  sayHello() {
+    this.srvLog.logHello();
   }
 }
